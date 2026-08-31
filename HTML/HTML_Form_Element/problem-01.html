@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Admission Application Form</title>
+</head>
+
+<body>
+
+    <h1>College Admission Application Form</h1>
+
+    <p>
+        Welcome to ABC College. Please fill out the admission application form
+        carefully. Enter correct information in all the required fields before
+        submitting the form.
+    </p>
+
+
+    <hr>
+
+    <h2>Personal Information</h2>
+
+    <form >
+
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname"
+               placeholder="Enter your full name"
+               minlength="3" maxlength="50" required>
+        <br><br>
+
+    
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"
+               min="1990-01-01" max="2010-12-31" required>
+        <br><br>
+
+        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email"
+               placeholder="example@gmail.com" required>
+        <br><br>
+
+    
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" name="mobile"
+               placeholder="10-digit mobile number"
+               pattern="[0-9]{10}" maxlength="10" required>
+        <br><br>
+
+        
+        <label for="pin">Application PIN:</label>
+        <input type="password" id="pin" name="pin"
+               placeholder="Enter 6-digit PIN"
+               pattern="[0-9]{6}" maxlength="6" required>
+        <br><br>
+
+    
+        <p><strong>Gender:</strong></p>
+
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">Other</label>
+
+        <br><br>
+
+    
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+            <option value="EWS">EWS</option>
+        </select>
+
+        <br><br>
+
+        
+        <label for="address">Permanent Address:</label>
+        <br>
+        <textarea id="address" name="address"
+                  rows="5" cols="40"
+                  placeholder="Enter your complete permanent address"
+                  minlength="10" maxlength="200"
+                  required></textarea>
+
+        <hr>
+
+        <h2>Course Information</h2>
+
+    
+        <label for="course">Select Course/Program:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select a Course --</option>
+            <option value="BCA">Bachelor of Computer Applications (BCA)</option>
+            <option value="BTech">Bachelor of Technology (B.Tech)</option>
+            <option value="BBA">Bachelor of Business Administration (BBA)</option>
+            <option value="BCom">Bachelor of Commerce (B.Com)</option>
+            <option value="BA">Bachelor of Arts (BA)</option>
+            <option value="BSc">Bachelor of Science (B.Sc)</option>
+        </select>
+
+        <br><br>
+
+    
+        <p><strong>Preferred Study Mode:</strong></p>
+
+        <input type="radio" id="regular" name="study_mode" value="Regular" required>
+        <label for="regular">Regular</label>
+
+        <input type="radio" id="online" name="study_mode" value="Online">
+        <label for="online">Online</label>
+
+        <br><br>
+
+        
+        <p><strong>Areas of Interest:</strong></p>
+
+        <input type="checkbox" id="coding" name="interest" value="Coding">
+        <label for="coding">Coding</label>
+
+        <input type="checkbox" id="sports" name="interest" value="Sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" id="music" name="interest" value="Music">
+        <label for="music">Music</label>
+
+        <input type="checkbox" id="management" name="interest" value="Management">
+        <label for="management">Management</label>
+
+        <br><br>
+
+        <hr>
+
+        <h2>Previous Qualification</h2>
+
+        
+        <label for="qualification">Previous Qualification:</label>
+        <select id="qualification" name="qualification" required>
+            <option value="">-- Select Qualification --</option>
+            <option value="10th">10th / High School</option>
+            <option value="12th">12th / Intermediate</option>
+            <option value="Diploma">Diploma</option>
+            <option value="Graduation">Graduation</option>
+        </select>
+
+        <br><br>
+
+
+        <label for="school">School / College Name:</label>
+        <input type="text" id="school" name="school"
+               placeholder="Enter school or college name"
+               minlength="3" maxlength="100" required>
+
+        <br><br>
+
+        
+        <label for="percentage">Percentage / CGPA:</label>
+        <input type="number" id="percentage" name="percentage"
+               min="0" max="100" step="0.01"
+               placeholder="Enter percentage" required>
+
+        <br><br>
+
+        
+        <label for="passingyear">Passing Year:</label>
+        <input type="number" id="passingyear" name="passingyear"
+               min="2000" max="2026"
+               placeholder="Example: 2025" required>
+
+        <br><br>
+
+        
+        <label for="document">Upload Admission Document:</label>
+        <input type="file" id="document" name="document"
+               accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <br><br>
+
+        <hr>
+
+        <h2>Declaration</h2>
+
+        <input type="checkbox" id="declaration"
+               name="declaration" value="accepted" required>
+
+        <label for="declaration">
+            I declare that all the information provided by me is correct and
+            complete. I agree to follow the rules and regulations of the college.
+        </label>
+
+        <br><br>
+
+        
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <small>
+             2026 ABC College. All Rights Reserved.
+        </small>
+    </p>
+
+</body>
+</html>
+```
