@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hospital Appointment Booking Form</title>
+</head>
+
+<body>
+
+    <h1>Hospital / Clinic Appointment Booking</h1>
+
+    <p>
+        Welcome to ABC Care Clinic. Please fill out the appointment form
+        carefully to request an appointment with one of our doctors.
+        Enter correct information so that we can contact you easily.
+    </p>
+
+    
+    <hr>
+
+    <h2>Clinic Timings</h2>
+
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Friday</td>
+            <td>9:00 AM</td>
+            <td>6:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM</td>
+            <td>2:00 PM</td>
+        </tr>
+
+        <tr>
+            <td>Sunday</td>
+            <td>Closed</td>
+            <td>Closed</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Appointment Form</h2>
+
+    <form action="#" method="post">
+
+        <h3>Patient Information</h3>
+
+        <!-- Patient Name -->
+        <label for="patientname">Patient Name:</label>
+        <input type="text"
+               id="patientname"
+               name="patient_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               required>
+
+        <br><br>
+
+        <!-- Email -->
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               required>
+
+        <br><br>
+
+        <!-- Mobile Number -->
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile"
+               placeholder="10-digit mobile number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               required>
+
+        <br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date"
+               id="dob"
+               name="date_of_birth"
+               min="1920-01-01"
+               max="2026-08-31"
+               required>
+
+        <br><br>
+
+        <!-- Patient ID - Optional -->
+        <label for="patientid">Patient ID (Optional):</label>
+        <input type="text"
+               id="patientid"
+               name="patient_id"
+               placeholder="Enter Patient ID if available"
+               maxlength="20">
+
+        <hr>
+
+        <h3>Appointment Details</h3>
+
+        <!-- Appointment Date -->
+        <label for="appointmentdate">Appointment Date:</label>
+        <input type="date"
+               id="appointmentdate"
+               name="appointment_date"
+               min="2026-09-01"
+               max="2026-12-31"
+               required>
+
+        <br><br>
+
+        <!-- Appointment Time -->
+        <label for="appointmenttime">Preferred Appointment Time:</label>
+        <input type="time"
+               id="appointmenttime"
+               name="appointment_time"
+               min="09:00"
+               max="18:00"
+               required>
+
+        <br><br>
+
+        <!-- Doctor Selection -->
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+
+            <option value="">-- Select a Doctor --</option>
+
+            <option value="dr_amit_sharma">
+                Dr. Amit Sharma - Cardiologist
+            </option>
+
+            <option value="dr_neha_verma">
+                Dr. Neha Verma - Dermatologist
+            </option>
+
+            <option value="dr_rohit_mehta">
+                Dr. Rohit Mehta - Orthopedic Specialist
+            </option>
+
+            <option value="dr_pooja_singh">
+                Dr. Pooja Singh - Pediatrician
+            </option>
+
+            <option value="dr_kunal_gupta">
+                Dr. Kunal Gupta - General Physician
+            </option>
+
+        </select>
+
+        <br><br>
+
+        <!-- Visit Type - Single Choice -->
+        <p><strong>Visit Type:</strong></p>
+
+        <input type="radio"
+               id="newpatient"
+               name="visit_type"
+               value="New Patient"
+               required>
+
+        <label for="newpatient">New Patient</label>
+
+        <input type="radio"
+               id="followup"
+               name="visit_type"
+               value="Follow-up">
+
+        <label for="followup">Follow-up</label>
+
+        <input type="radio"
+               id="consultation"
+               name="visit_type"
+               value="Consultation">
+
+        <label for="consultation">Consultation</label>
+
+        <input type="radio"
+               id="emergency"
+               name="visit_type"
+               value="Emergency">
+
+        <label for="emergency">Emergency</label>
+
+        <br><br>
+
+        <!-- Communication Method -->
+        <p><strong>Preferred Communication Method:</strong></p>
+
+        <input type="radio"
+               id="phone"
+               name="communication"
+               value="Phone"
+               required>
+
+        <label for="phone">Phone</label>
+
+        <input type="radio"
+               id="emailcommunication"
+               name="communication"
+               value="Email">
+
+        <label for="emailcommunication">Email</label>
+
+        <input type="radio"
+               id="sms"
+               name="communication"
+               value="SMS">
+
+        <label for="sms">SMS</label>
+
+        <br><br>
+
+        <!-- Reason for Visit -->
+        <label for="reason">Reason for Visit / Additional Information:</label>
+        <br>
+
+        <textarea id="reason"
+                  name="reason_for_visit"
+                  rows="6"
+                  cols="50"
+                  placeholder="Describe your reason for visiting the clinic"
+                  minlength="10"
+                  maxlength="300"
+                  required></textarea>
+
+        <br><br>
+
+        <hr>
+
+        <h3>Appointment Terms</h3>
+
+        <!-- Terms Checkbox -->
+        <input type="checkbox"
+               id="terms"
+               name="appointment_terms"
+               value="accepted"
+               required>
+
+        <label for="terms">
+            I accept the appointment terms and confirm that the information
+            provided by me is correct.
+        </label>
+
+        <br><br>
+
+        <!-- Submit and Reset -->
+        <input type="submit" value="Book Appointment">
+
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <h3>Contact the Clinic</h3>
+
+    <p>
+        For general questions, call us at
+        <a href="tel:+911234567890" title="Call ABC Care Clinic">
+            +91 12345 67890
+        </a>
+    </p>
+
+    <p>
+        <small>
+            ABC Care Clinic | Open Monday to Saturday
+        </small>
+    </p>
+
+</body>
+
+</html>
+

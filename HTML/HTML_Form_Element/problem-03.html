@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Course Enrollment Form</title>
+</head>
+
+<body>
+
+    <h1>Online Course Enrollment & Student Registration</h1>
+
+    <p>
+        Welcome to ABC Learning Academy. Fill out this registration form to
+        enroll in a technical course. Please provide correct information
+        and select your preferred course and learning method.
+    </p>
+
+    
+
+    
+
+    <hr>
+
+    <h2>Student Registration Form</h2>
+
+    <form action="#" method="post">
+
+        <h3>Account Information</h3>
+
+      
+        <label for="name">Student Name:</label>
+        <input type="text"
+               id="name"
+               name="student_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               required>
+
+        <br><br>
+
+   
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               required>
+
+        <br><br>
+
+      
+        <label for="password">Password:</label>
+        <input type="password"
+               id="password"
+               name="password"
+               placeholder="Enter your password"
+               minlength="6"
+               maxlength="20"
+               required>
+
+        <br><br>
+
+     
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile"
+               placeholder="10-digit mobile number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               required>
+
+        <br><br>
+
+      
+        <label for="dob">Date of Birth:</label>
+        <input type="date"
+               id="dob"
+               name="date_of_birth"
+               min="1990-01-01"
+               max="2010-12-31"
+               required>
+
+        <hr>
+
+        <h3>Course Information</h3>
+
+       
+        <label for="course">Select Course:</label>
+
+        <select id="course"
+                name="course"
+                required>
+
+            <option value="">-- Select a Course --</option>
+
+            <option value="python">
+                Python Programming
+            </option>
+
+            <option value="java">
+                Java Programming
+            </option>
+
+            <option value="web_development">
+                Web Development
+            </option>
+
+            <option value="data_structures">
+                Data Structures
+            </option>
+
+            <option value="database">
+                Database Management
+            </option>
+
+            <option value="machine_learning">
+                Machine Learning
+            </option>
+
+        </select>
+
+        <br><br>
+
+        
+        <label for="batch">Select Batch / Session:</label>
+
+        <select id="batch"
+                name="batch"
+                required>
+
+            <option value="">-- Select Batch --</option>
+            <option value="morning">Morning Batch - 9:00 AM</option>
+            <option value="afternoon">Afternoon Batch - 2:00 PM</option>
+            <option value="evening">Evening Batch - 6:00 PM</option>
+            <option value="weekend">Weekend Batch - Saturday & Sunday</option>
+
+        </select>
+
+        <br><br>
+
+        
+        <p><strong>Learning Preference:</strong></p>
+
+        <input type="radio"
+               id="online"
+               name="learning_mode"
+               value="Online"
+               required>
+
+        <label for="online">Online</label>
+
+        <input type="radio"
+               id="offline"
+               name="learning_mode"
+               value="Offline">
+
+        <label for="offline">Offline</label>
+
+        <input type="radio"
+               id="hybrid"
+               name="learning_mode"
+               value="Hybrid">
+
+        <label for="hybrid">Hybrid</label>
+
+        <br><br>
+
+        <hr>
+
+        <h3>Areas of Interest</h3>
+
+        <p>Select the topics you are interested in:</p>
+
+       
+
+        <input type="checkbox"
+               id="java"
+               name="interest"
+               value="Java">
+
+        <label for="java">Java</label>
+
+        <input type="checkbox"
+               id="python"
+               name="interest"
+               value="Python">
+
+        <label for="python">Python</label>
+
+        <input type="checkbox"
+               id="web"
+               name="interest"
+               value="Web Development">
+
+        <label for="web">Web Development</label>
+
+        <input type="checkbox"
+               id="ds"
+               name="interest"
+               value="Data Structures">
+
+        <label for="ds">Data Structures</label>
+
+        <input type="checkbox"
+               id="database"
+               name="interest"
+               value="Database">
+
+        <label for="database">Database</label>
+
+        <hr>
+
+        <h3>Educational Background</h3>
+
+        <!-- Education Level -->
+        <label for="education">Education Level:</label>
+
+        <select id="education"
+                name="education_level"
+                required>
+
+            <option value="">-- Select Education Level --</option>
+            <option value="school">School</option>
+            <option value="diploma">Diploma</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="postgraduate">Postgraduate</option>
+            <option value="other">Other</option>
+
+        </select>
+
+        <br><br>
+
+        <!-- College / Institution -->
+        <label for="college">College / Institution:</label>
+
+        <input type="text"
+               id="college"
+               name="college"
+               placeholder="Enter college or institution name"
+               minlength="3"
+               maxlength="100"
+               required>
+
+        <br><br>
+
+     
+        <label for="semester">Current Semester / Year:</label>
+
+        <input type="text"
+               id="semester"
+               name="current_semester"
+               placeholder="Example: 3rd Semester"
+               maxlength="30"
+               required>
+
+        <br><br>
+
+       
+        <label for="experience">
+            Programming Experience (Years):
+        </label>
+
+        <input type="number"
+               id="experience"
+               name="programming_experience"
+               min="0"
+               max="20"
+               step="0.5"
+               placeholder="Example: 2">
+
+        <br><br>
+
+       
+        <label for="github">GitHub / Portfolio URL:</label>
+
+        <input type="url"
+               id="github"
+               name="github_portfolio"
+               placeholder="https://github.com/username">
+
+        <hr>
+
+        <h3>Learning Goals</h3>
+
+      
+        <label for="goals">
+            What do you want to achieve from this course?
+        </label>
+
+        <br><br>
+
+        <textarea id="goals"
+                  name="learning_goals"
+                  rows="6"
+                  cols="50"
+                  placeholder="Write your learning goals here..."
+                  minlength="10"
+                  maxlength="300"
+                  required></textarea>
+
+        <br><br>
+
+        <hr>
+
+        <h3>Confirmation</h3>
+
+      
+
+        <input type="checkbox"
+               id="confirmation"
+               name="confirmation"
+               value="confirmed"
+               required>
+
+        <label for="confirmation">
+            I confirm that the information provided by me is correct and
+            I agree to the course registration terms.
+        </label>
+
+        <br><br>
+
+    
+
+        <input type="submit"
+               value="Submit Registration">
+
+        <input type="reset"
+               value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <small>
+             2026 ABC Learning Academy. All Rights Reserved.
+        </small>
+    </p>
+
+</body>
+
+</html>
+

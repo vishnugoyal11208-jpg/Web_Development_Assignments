@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Employee Leave Request Form</title>
+</head>
+
+<body>
+
+    <h1>Employee Leave Request</h1>
+
+    <p>
+        Please use this form to submit your leave request. Enter your employee
+        details, select the type of leave, provide the required dates and
+        reason, and confirm your request before submitting.
+    </p>
+
+    <hr>
+
+    <h2>Leave Categories</h2>
+
+    <table border="1">
+        <tr>
+            <th>Leave Category</th>
+            <th>Description</th>
+        </tr>
+
+        <tr>
+            <td>Casual Leave</td>
+            <td>For personal work or short breaks.</td>
+        </tr>
+
+        <tr>
+            <td>Sick Leave</td>
+            <td>For illness or medical reasons.</td>
+        </tr>
+
+        <tr>
+            <td>Earned Leave</td>
+            <td>Planned leave earned by the employee.</td>
+        </tr>
+
+        <tr>
+            <td>Work From Home</td>
+            <td>For working from home instead of the office.</td>
+        </tr>
+
+        <tr>
+            <td>Other</td>
+            <td>For other approved reasons.</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Leave Request Form</h2>
+
+    <form action="#" method="post">
+
+        <h3>Employee Information</h3>
+
+        <label for="employee_name">Employee Name:</label>
+        <input type="text"
+               id="employee_name"
+               name="employee_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               required>
+
+        <br><br>
+
+        <label for="employee_id">Employee ID:</label>
+        <input type="text"
+               id="employee_id"
+               name="employee_id"
+               placeholder="Example: EMP1234"
+               pattern="EMP[0-9]{4}"
+               maxlength="7"
+               required>
+
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@company.com"
+               required>
+
+        <br><br>
+
+        <label for="department">Department:</label>
+        <select id="department" name="department" required>
+
+            <option value="">-- Select Department --</option>
+            <option value="hr">Human Resources</option>
+            <option value="it">Information Technology</option>
+            <option value="finance">Finance</option>
+            <option value="marketing">Marketing</option>
+            <option value="sales">Sales</option>
+            <option value="operations">Operations</option>
+
+        </select>
+
+        <hr>
+
+        <h3>Leave Details</h3>
+
+        <p>Leave Type:</p>
+
+        <input type="radio"
+               id="casual"
+               name="leave_type"
+               value="Casual Leave"
+               required>
+
+        <label for="casual">Casual Leave</label>
+
+        <input type="radio"
+               id="sick"
+               name="leave_type"
+               value="Sick Leave">
+
+        <label for="sick">Sick Leave</label>
+
+        <input type="radio"
+               id="earned"
+               name="leave_type"
+               value="Earned Leave">
+
+        <label for="earned">Earned Leave</label>
+
+        <input type="radio"
+               id="wfh"
+               name="leave_type"
+               value="Work From Home">
+
+        <label for="wfh">Work From Home</label>
+
+        <input type="radio"
+               id="other"
+               name="leave_type"
+               value="Other">
+
+        <label for="other">Other</label>
+
+        <br><br>
+
+        <label for="start_date">Leave Start Date:</label>
+        <input type="date"
+               id="start_date"
+               name="start_date"
+               min="2026-09-01"
+               max="2026-12-31"
+               required>
+
+        <br><br>
+
+        <label for="end_date">Leave End Date:</label>
+        <input type="date"
+               id="end_date"
+               name="end_date"
+               min="2026-09-01"
+               max="2026-12-31"
+               required>
+
+        <br><br>
+
+        <label for="leave_days">Number of Leave Days:</label>
+        <input type="number"
+               id="leave_days"
+               name="leave_days"
+               min="0.5"
+               max="30"
+               step="0.5"
+               placeholder="Example: 2"
+               required>
+
+        <br><br>
+
+        <p>Will you be reachable during your leave?</p>
+
+        <input type="radio"
+               id="reachable_yes"
+               name="reachable"
+               value="Yes"
+               required>
+
+        <label for="reachable_yes">Yes</label>
+
+        <input type="radio"
+               id="reachable_no"
+               name="reachable"
+               value="No">
+
+        <label for="reachable_no">No</label>
+
+        <br><br>
+
+        <label for="reason">Reason for Leave:</label>
+        <br>
+
+        <textarea id="reason"
+                  name="leave_reason"
+                  rows="6"
+                  cols="50"
+                  placeholder="Enter the reason for your leave"
+                  minlength="10"
+                  maxlength="300"
+                  required></textarea>
+
+        <br><br>
+
+        <label for="alternate_contact">Alternate Contact Number:</label>
+        <input type="tel"
+               id="alternate_contact"
+               name="alternate_contact"
+               placeholder="10-digit contact number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               required>
+
+        <br><br>
+
+        <label for="document">Supporting Document (Optional):</label>
+        <input type="file"
+               id="document"
+               name="supporting_document"
+               accept=".pdf,.jpg,.jpeg,.png">
+
+        <hr>
+
+        <h3>Declaration</h3>
+
+        <input type="checkbox"
+               id="declaration"
+               name="declaration"
+               value="accepted"
+               required>
+
+        <label for="declaration">
+            I confirm that the information provided in this form is correct
+            and I agree to follow the company's leave policy.
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Submit Leave Request">
+
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <small>
+            Employee Leave Management System - 2026
+        </small>
+    </p>
+
+</body>
+
+</html>
+

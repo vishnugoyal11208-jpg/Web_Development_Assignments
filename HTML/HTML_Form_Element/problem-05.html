@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>E-Commerce Checkout Page</title>
+</head>
+
+<body>
+
+    <h1>Checkout & Delivery</h1>
+
+    <p>
+        Welcome to ABC Store. Please check your selected products and fill in
+        your customer, delivery and payment details to place your order.
+    </p>
+
+
+    <hr>
+
+    <h2>Selected Products</h2>
+
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+
+        <tr>
+            <td>Wireless Headphones</td>
+            <td>1</td>
+            <td>₹2,000</td>
+            <td>₹2,000</td>
+        </tr>
+
+        <tr>
+            <td>Smart Watch</td>
+            <td>2</td>
+            <td>₹1,500</td>
+            <td>₹3,000</td>
+        </tr>
+
+        <tr>
+            <td>USB Keyboard</td>
+            <td>1</td>
+            <td>₹800</td>
+            <td>₹800</td>
+        </tr>
+
+        <tr>
+            <th colspan="3">Order Total</th>
+            <th>₹5,800</th>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h2>Customer Information</h2>
+
+    <form action="#" method="post">
+
+        <label for="customer_name">Full Name:</label>
+        <input type="text"
+               id="customer_name"
+               name="customer_name"
+               placeholder="Enter your full name"
+               minlength="3"
+               maxlength="50"
+               autocomplete="name"
+               required>
+
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email"
+               id="email"
+               name="email"
+               placeholder="example@gmail.com"
+               autocomplete="email"
+               required>
+
+        <br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel"
+               id="mobile"
+               name="mobile"
+               placeholder="10-digit mobile number"
+               pattern="[0-9]{10}"
+               maxlength="10"
+               autocomplete="tel"
+               required>
+
+        <hr>
+
+        <h2>Delivery Address</h2>
+
+        <label for="house">House / Street Address:</label>
+        <input type="text"
+               id="house"
+               name="house_street"
+               placeholder="House number and street"
+               minlength="5"
+               maxlength="100"
+               autocomplete="street-address"
+               required>
+
+        <br><br>
+
+        <label for="city">City:</label>
+        <input type="text"
+               id="city"
+               name="city"
+               placeholder="Enter your city"
+               minlength="2"
+               maxlength="50"
+               autocomplete="address-level2"
+               required>
+
+        <br><br>
+
+        <label for="state">State:</label>
+        <select id="state"
+                name="state"
+                required>
+
+            <option value="">-- Select State --</option>
+            <option value="uttar_pradesh">Uttar Pradesh</option>
+            <option value="delhi">Delhi</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="karnataka">Karnataka</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="postal_code">Postal Code:</label>
+        <input type="text"
+               id="postal_code"
+               name="postal_code"
+               placeholder="6-digit postal code"
+               pattern="[0-9]{6}"
+               maxlength="6"
+               autocomplete="postal-code"
+               required>
+
+        <br><br>
+
+        <label for="country">Country:</label>
+        <select id="country"
+                name="country"
+                required>
+
+            <option value="">-- Select Country --</option>
+            <option value="india">India</option>
+            <option value="usa">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+            <option value="japan">Japan</option>
+
+        </select>
+
+        <hr>
+
+        <h2>Delivery Method</h2>
+
+        <input type="radio"
+               id="standard"
+               name="delivery_method"
+               value="Standard"
+               required>
+
+        <label for="standard">Standard Delivery</label>
+
+        <input type="radio"
+               id="express"
+               name="delivery_method"
+               value="Express">
+
+        <label for="express">Express Delivery</label>
+
+        <input type="radio"
+               id="same_day"
+               name="delivery_method"
+               value="Same Day">
+
+        <label for="same_day">Same Day Delivery</label>
+
+        <hr>
+
+        <h2>Payment Method</h2>
+
+        <input type="radio"
+               id="card"
+               name="payment_method"
+               value="Card"
+               required>
+
+        <label for="card">Card</label>
+
+        <input type="radio"
+               id="cod"
+               name="payment_method"
+               value="Cash on Delivery">
+
+        <label for="cod">Cash on Delivery</label>
+
+        <input type="radio"
+               id="upi"
+               name="payment_method"
+               value="UPI">
+
+        <label for="upi">UPI / Online Payment</label>
+
+        <br><br>
+
+        <h3>Card Payment Information</h3>
+
+        <label for="card_holder">Card Holder Name:</label>
+        <input type="text"
+               id="card_holder"
+               name="card_holder"
+               placeholder="Name on card"
+               minlength="3"
+               maxlength="50">
+
+        <br><br>
+
+        <label for="card_number">Card Number:</label>
+        <input type="text"
+               id="card_number"
+               name="card_number"
+               placeholder="16-digit card number"
+               pattern="[0-9]{16}"
+               maxlength="16">
+
+        <br><br>
+
+        <label for="expiry">Card Expiry Date:</label>
+        <input type="month"
+               id="expiry"
+               name="card_expiry">
+
+        <br><br>
+
+        <label for="security_code">Security Code:</label>
+        <input type="password"
+               id="security_code"
+               name="security_code"
+               placeholder="3-digit security code"
+               pattern="[0-9]{3}"
+               maxlength="3">
+
+        <hr>
+
+        <h2>Billing Address</h2>
+
+        <input type="checkbox"
+               id="same_address"
+               name="billing_same_as_delivery"
+               value="Yes">
+
+        <label for="same_address">
+            My billing address is the same as my delivery address.
+        </label>
+
+        <hr>
+
+        <h2>Delivery Instructions</h2>
+
+        <label for="instructions">
+            Additional Delivery Instructions:
+        </label>
+
+        <br><br>
+
+        <textarea id="instructions"
+                  name="delivery_instructions"
+                  rows="5"
+                  cols="50"
+                  placeholder="Example: Please leave the package with the security guard."
+                  maxlength="300"></textarea>
+
+        <br><br>
+
+        <label for="coupon">Coupon / Promo Code (Optional):</label>
+        <input type="text"
+               id="coupon"
+               name="coupon_code"
+               placeholder="Enter coupon code"
+               maxlength="15"
+               pattern="[A-Za-z0-9]*">
+
+        <hr>
+
+        <h2>Order Confirmation</h2>
+
+        <input type="checkbox"
+               id="terms"
+               name="terms"
+               value="accepted"
+               required>
+
+        <label for="terms">
+            I agree to the Terms and Conditions.
+        </label>
+
+        <br><br>
+
+        <input type="checkbox"
+               id="confirmation"
+               name="order_confirmation"
+               value="confirmed"
+               required>
+
+        <label for="confirmation">
+            I confirm that my order details, delivery address and payment
+            information are correct.
+        </label>
+
+        <br><br>
+
+        <input type="submit" value="Place Order">
+
+        <input type="reset" value="Reset Form">
+
+    </form>
+
+    <hr>
+
+    <p>
+        <small>
+            Thank you for shopping with ABC Store.
+        </small>
+    </p>
+
+</body>
+
+</html>
+
