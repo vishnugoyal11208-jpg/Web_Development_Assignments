@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Releasing Page</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+      
+        .movie-card {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+       
+        .poster-container {
+            width: 160px;
+            min-width: 160px;
+            position: relative;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        .poster-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+       
+        .stats-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            font-size: 11px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stats-bar span {
+            color: #ff416c;
+        }
+
+        
+        .movie-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        
+        .movie-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000000;
+            margin: 0 0 12px 0;
+        }
+
+        
+        .release-date {
+            font-size: 14px;
+            color: #333333;
+            margin: 0 0 20px 0;
+        }
+
+        /* Pink book tickets button */
+        .book-btn {
+            background-color: #f84464;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            font-size: 13px;
+            border-radius: 4px;
+            cursor: pointer;
+            align-self: flex-start;
+            font-weight: 500;
+        }
+
+        .book-btn:hover {
+            background-color: #df3250;
+        }
+
+        /* Responsive Layout for smaller screens */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+
+       
+        <div class="movie-card">
+            <div class="poster-container">
+                
+                <img src="https://tse4.mm.bing.net/th/id/OIP.0jAyowSxevmLKHyqKWwJQAHaKp?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="ET" class="poster-img">
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">ET (2022)</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+        
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.ecjRbQ3dEBxB-wvIvkPrlAHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Jhund" class="poster-img">
+                
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">Jhund</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+        
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="https://media-cache.cinematerial.com/p/500x/u2hclaur/gangubai-kathiawadi-indian-movie-poster.jpg?v=1645148918" alt="Gangubai Kathiawadi" class="poster-img">
+                
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">Gangubai Kathiawadi</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+       
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="https://wallpaperaccess.com/full/7779152.jpg" alt="Radhe Shyam" class="poster-img">
+                
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">Radhe Shyam</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+        
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="https://assets-prd.ignimgs.com/2022/01/13/uncharted-poster-full-1642086040683.jpg" alt="Uncharted" class="poster-img">
+                
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">Uncharted</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+        
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="https://wallpapercave.com/wp/wp11486956.jpg" alt="The Batman" class="poster-img">
+                
+            </div>
+            <div class="movie-details">
+                <h2 class="movie-title">The Batman</h2>
+                <p class="release-date">Releasing on 11 Mar, 2022</p>
+                <button class="book-btn">Book tickets</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

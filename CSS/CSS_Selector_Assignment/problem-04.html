@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Periodic Table of Elements</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      color: #111;
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .instruction {
+      margin: 0 0 65px;
+      text-align: center;
+      font-size: clamp(16px, 2.5vw, 25px);
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      text-align: center;
+      font-size: clamp(18px, 2.5vw, 27px);
+      font-weight: normal;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      padding-bottom: 12px;
+    }
+
+    .table {
+      display: grid;
+      grid-template-columns: repeat(18, 1fr);
+      grid-template-rows: repeat(7, 41px) 22px 34px 34px;
+      gap: 13px 12px;
+      min-width: 850px;
+    }
+
+    .cell {
+      min-width: 0;
+      border: 2px solid #444;
+      background: var(--color);
+    }
+
+    .red     { --color: #ff5054; }
+    .green   { --color: #879f2b; }
+    .blue    { --color: #1000f5; }
+    .orange  { --color: #ff5900; }
+    .purple  { --color: #a9008e; }
+    .lime    { --color: #55a32d; }
+    .pink    { --color: #f50056; }
+    .yellow  { --color: #ffc400; }
+    .gray    { --color: #705965; }
+    .cream   { --color: #ffe6d5; }
+
+    .hydrogen {
+      grid-column: 1;
+      grid-row: 1;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: #bd0808;
+      font-size: 23px;
+    }
+
+    .left-column {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 6;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(6, 41px);
+      gap: 13px 12px;
+    }
+
+    .left-column .green {
+      grid-column: 1;
+    }
+
+    .left-column .red {
+      grid-column: 2;
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+    }
+
+    .silicon {
+      position: relative;
+      grid-column: 4 / span 3;
+      grid-row: 1 / span 3;
+      padding: 38px 8px 8px;
+      background: #879f2b;
+    }
+
+    .atomic-number {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 14px;
+    }
+
+    .symbol {
+      font-size: 48px;
+      line-height: 1.05;
+    }
+
+    .element-name {
+      font-size: 14px;
+    }
+
+    .upper-right {
+      grid-column: 12 / span 6;
+      grid-row: 2 / span 2;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 41px);
+      gap: 13px 12px;
+    }
+
+    .main-row {
+      grid-column: 4 / span 15;
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      grid-template-rows: 41px;
+      gap: 13px 12px;
+    }
+
+    .row-3 { grid-row: 4; }
+    .row-4 { grid-row: 5; }
+    .row-5 { grid-row: 6; }
+    .row-6 { grid-row: 7; }
+
+    .lanthanide-actinide {
+      grid-column: 3;
+      grid-row: 6 / span 2;
+      display: grid;
+      grid-template-rows: repeat(2, 41px);
+      gap: 13px;
+    }
+
+    .series {
+      grid-column: 5 / span 9;
+      grid-row: 9 / span 2;
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      grid-template-rows: 34px 34px;
+      gap: 0;
+    }
+
+    .series .cell {
+      border-width: 1px;
+    }
+
+    .series-top {
+      background: #485d2b;
+    }
+
+    .series-bottom {
+      background: #9bc361;
+    }
+
+    .series-label {
+      padding: 10px 5px 0;
+      font-size: 14px;
+    }
+
+    .series-label.end {
+      text-align: right;
+      padding-right: 4px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px;
+      }
+
+      .instruction {
+        margin-bottom: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <h1>THE PERIODIC TABLE OF ELEMENTS</h1>
+
+    <div class="table-wrap">
+      <section class="table" aria-label="Simplified periodic table">
+        <div class="cell hydrogen">H</div>
+
+        <div class="left-column">
+          <i class="cell green"></i><i class="cell red">4</i>
+          <i class="cell green"></i><i class="cell red">12</i>
+          <i class="cell green"></i><i class="cell red">20</i>
+          <i class="cell green"></i><i class="cell red">38</i>
+          <i class="cell green"></i><i class="cell red">56</i>
+          <i class="cell green"></i><i class="cell red">88</i>
+        </div>
+
+        <div class="cell silicon">
+          <span class="atomic-number">14</span>
+          <div class="symbol">Si</div>
+          <div class="element-name">Silicon</div>
+        </div>
+
+        <div class="upper-right">
+          <i class="cell purple"></i><i class="cell lime"></i>
+          <i class="cell lime"></i><i class="cell lime"></i>
+          <i class="cell pink"></i><i class="cell yellow"></i>
+
+          <i class="cell orange"></i><i class="cell purple"></i>
+          <i class="cell lime"></i><i class="cell lime"></i>
+          <i class="cell pink"></i><i class="cell yellow"></i>
+        </div>
+
+        
+        <div class="main-row row-3">
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell orange"></i>
+          <i class="cell purple"></i><i class="cell purple"></i>
+          <i class="cell lime"></i><i class="cell pink"></i>
+          <i class="cell yellow"></i>
+        </div>
+
+        
+        <div class="main-row row-4">
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell orange"></i>
+          <i class="cell orange"></i><i class="cell purple"></i>
+          <i class="cell purple"></i><i class="cell pink"></i>
+          <i class="cell yellow"></i>
+        </div>
+
+        
+        <div class="main-row row-5">
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell orange"></i>
+          <i class="cell orange"></i><i class="cell orange"></i>
+          <i class="cell purple"></i><i class="cell pink"></i>
+          <i class="cell yellow"></i>
+        </div>
+
+
+        <div class="main-row row-6">
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell blue"></i>
+          <i class="cell blue"></i><i class="cell gray"></i>
+          <i class="cell gray"></i><i class="cell gray"></i>
+          <i class="cell gray"></i><i class="cell gray"></i>
+          <i class="cell gray"></i>
+        </div>
+
+        <div class="lanthanide-actinide">
+          <i class="cell cream"></i>
+          <i class="cell cream"></i>
+        </div>
+
+        <div class="series">
+          <i class="cell series-top series-label">La</i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+          <i class="cell series-top"></i><i class="cell series-top"></i>
+
+          <i class="cell series-bottom"></i><i class="cell series-bottom"></i>
+          <i class="cell series-bottom"></i><i class="cell series-bottom"></i>
+          <i class="cell series-bottom"></i>
+          <i class="cell series-bottom series-label">Am</i>
+          <i class="cell series-bottom"></i><i class="cell series-bottom"></i>
+          <i class="cell series-bottom"></i><i class="cell series-bottom"></i>
+          <i class="cell series-bottom"></i><i class="cell series-bottom"></i>
+          <i class="cell series-bottom"></i>
+          <i class="cell series-bottom series-label end">No</i>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
