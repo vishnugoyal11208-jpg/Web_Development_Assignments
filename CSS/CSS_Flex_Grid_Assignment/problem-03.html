@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> study lab </title>
+    <style>
+        #header{
+            display:flex;
+            justify-content:space-between;
+            margin-top:30px;
+            border-bottom:1px solid black;
+
+        }
+        .studylab{
+            display:flex;
+            justify-content:space-between;
+            justify-content:space-evenly;
+        }
+        .studylab div{
+            padding:10px;
+            margin:5px;
+        }
+        .sidebar>div{
+            height:50%;
+            width:50%;
+            background-color:purple;
+            margin:10px;
+            padding:10px;
+            box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.2);
+            justify-content:center;
+            text-align:center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="header"> 
+        <div class="studylab" style="background-color: purple;color:white;padding:10px"> StudyLab </div>
+        <div class="studylab" style="display:flex; justify-content: space-between;">
+            <div>Home</div>
+            <div>About</div>
+            <div>Course</div>
+            <div>Instructors</div>
+            <div>Contact</div>
+            <div>Login</div>
+        </div>
+    </div>
+
+    <div id="mainbox" style="display: flex;flex-direction:row;justify-content:space-between;margin-top:20px;height:600px;">
+        <div id="content" style="width: 50%;"> 
+                <p style="margin:0;color:rgb(158, 158, 254)"> WELCOME TO STUDY LAB </p>
+                <h1> We Are StudyLab An Online Learning Center</h1>
+                <p style="color: grey;"> StudyLab is a free online learning platform that offers a wide range of courses and resources for students of all ages. Our mission
+                    is to provide high-quality education to anyone, anywhere, at any time. Whether you're looking to improve your skills, learn something 
+                    new, or prepare for exams, StudyLab has something for you. Join our community of learners today and start your journey towards success! </p>
+                <a href="#" style="text-decoration:none;color:white;background-color:purple;padding:10px;border-radius:5px;"> <img src="https://mohamed-abdo.medium.com/how-to-retrieve-youtube-video-thumbnails-using-youtube-api-and-direct-urls-adc8114ff318" alt="Get Started"> </a>
+        </div>
+        <div id="sidebar" style="width: 50%;display:grid;grid-template-columns:repeat(2,50%);grid-template-rows:repeat(2,50%);gap:10px;"> 
+            <div> 
+                <h2>  Top quality content </h2>
+                <p> A small river named Duden flows by their place and supplies</p>
+            </div>
+            <div> 
+                <h2> Highly Skilled Instructors</h2>
+                <p> Our instructors are experts in their fields and are dedicated to helping you succeed.</p>
+
+            </div>
+            <div> 
+                <h2> World Class & Quiz </h2>
+                <p> We offer a variety of quizzes and assessments to help you test your knowledge and track your progress.</p>
+            </div>
+            <div>
+                <h2> Get Certified</h2>
+                <p> We offer certificates of completion for many of our courses, which can help you demonstrate your skills to potential employers.</p>
+            </div>
+        </div>
+    </div></body>
+</html>

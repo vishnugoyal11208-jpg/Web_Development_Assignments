@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #mainbox{
+            box-shadow: 0px 0px 10px 5px rgb(210, 210, 210);
+            width: 400px;
+            height: 500px;
+            justify-self: center;
+            margin:30px;
+            padding:50px;
+        }
+        .numbers{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            grid-template-rows:repeat(4,1fr);
+            gap: 10px;
+            margin-top:20px;
+           
+        }
+
+        .numbers > div{
+            color: black;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            text-align:center;
+            box-shadow: 0px 0px 10px 5px rgb(224, 224, 224);
+            height:60px;
+            align-content: center;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div id="mainbox">
+        <div style="width: 100%;box-shadow: 0px 0px 10px 5px rgb(224, 224, 224);height:60px;border-radius: 10px;"></div>
+        <div class="numbers">     
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div  style="color:white; background-color: black;">+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div style="color:white; background-color: black;">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div style="color:white; background-color: black;">x</div>
+            <div style="background-color: red;color: white;">C</div>
+            <div>0</div>
+            <div style="color:white; background-color: black;">=</div>
+            <div style="color:white; background-color: black;">/</div>
+        </div>
+    </div>
+</body>
+</html>
