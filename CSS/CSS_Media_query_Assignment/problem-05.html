@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header{
+            background-color: yellow;
+            font-size: 30px;
+            padding: 5px;
+        }
+        #left-box{
+            font-size: 20px;
+            background-color: red;
+            height: 200px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        @media screen and (min-width:700px){
+            #main{
+                display: flex;
+
+            }
+            
+            #left-box{
+                width:70%;
+                height: 300px;
+            }
+            #right-box{
+                width:30%;
+                height:300px;
+                display:flex;
+                flex-direction: column;
+                margin-left:20px ;
+                color:black;
+                margin-top:20px;
+            
+            }
+        }
+        @media screen and (max-width:700px) and (min-width:400px){
+            #main{
+                display: flex;
+                flex-direction: column;
+                height: 300px;
+
+            }
+            
+            #left-box{
+                width:100%;
+                height:70%;
+            }
+            #right-box{
+                width:100%;
+                height:30%;
+                display:flex;
+                flex-direction: row;
+                padding: 0px;
+                color:black;
+                margin-top:20px;
+                justify-content: space-between;
+                
+            }
+
+            
+        }
+
+        @media screen and (max-width:400px){
+            #main{
+                display: flex;
+                flex-direction: column;
+            }
+
+            #left-box{
+                width: 100%;
+                height:30%;
+
+            }
+            #right-box{
+                width:100%;
+                height:70%;
+            }
+            #right-box>div{
+                width: 100%;
+            }
+        }
+
+        #right-box > div{
+            padding: 20px;
+            
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">  Navigation </div>
+    <div id="main"> 
+        <div id="left-box"> LEFT BOX </div>
+        <div id="right-box">
+            <div class="a" style="margin: 10px;"> RIGHT BOX 1 </div>
+            <div class="b" style="margin:10px;"> RIGHT BOX 2</div>
+            <div class="c" style="margin: 10px;"> RIGHT BOX 3</div>
+        </div>
+    </div>
+</body>
+</html>
